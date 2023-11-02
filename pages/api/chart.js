@@ -50,7 +50,7 @@ export default async (req, res) => {
         },
       };
 
-      const imageUrl = `https://quickchart.io/chart?w=300&h=200&backgroundColor=white&format=png&devicePixelRatio=3.5&c=${encodeURIComponent(JSON.stringify(chartConfig))}`;
+      const imageUrl = `https://quickchart.io/chart?w=500&h=500&backgroundColor=white&format=png&devicePixelRatio=2.0&c=${encodeURIComponent(JSON.stringify(chartConfig))}`;
       const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
 
       res.setHeader('Content-Type', 'image/png');
